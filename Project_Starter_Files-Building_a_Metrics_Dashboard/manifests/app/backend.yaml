@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+kubeapiVersion: apps/v1
 kind: Deployment
 metadata:
   name: backend-app
@@ -15,6 +15,7 @@ spec:
       containers:
       - name: backend
         image: ghcr.io/thejaysmith/backend:v1
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
 ---

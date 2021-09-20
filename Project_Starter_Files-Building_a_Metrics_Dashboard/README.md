@@ -15,7 +15,7 @@
 6. Open a new bash window and repeat steps `2-3`
 7. run `kubectl get pods --all-namespace` to check if pods are finished being created
     - wait until pods are finished being created
-    - if a pod is crashing, run `sudo curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=v1.20.7+k3s1 sh -` and continue waiting for pods to be in running or completed states
+    - if a pod is crashing, run `sudo curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=v1.19.5+k3s1 sh -` and continue waiting for pods to be in running or completed states
 8. Install Jaegar
     - run `kubectl create namespace observability`
     - run `kubectl create -f https://raw.githubusercontent.com/jaegertracing/jaeger-operator/master/deploy/crds/jaegertracing.io_jaegers_crd.yaml`
@@ -29,6 +29,14 @@
     - run `kubectl create -f https://raw.githubusercontent.com/jaegertracing/jaeger-operator/master/deploy/cluster_role_binding.yaml`
 11. After running cluster wide keep checking on status of the pods using `kubectl get pods --all-namespace`
     - this may take some time, just keep checking until they are finished
+12. Install Python app
+    - navigate to `manifests` folder
+    - run `kubectl apply -f app/`
+    - run `kubectl get pods --all-namespace` and check that newly created pods are finished being created
+13. Exposing Grafana
+    - run `kubectl get pod -n monitoring | grep grafana` and look for pod named `prometheus-grafana-########` where `#` is random characters
+    - copy the pods name
+    - run `kubectl port-forward -n monitoring [pod name] 3000`
 
 **Note:** For the screenshots, you can store all of your answer images in the `answer-img` directory.
 
