@@ -33,22 +33,46 @@
     - navigate to `manifests` folder
     - run `kubectl apply -f app/`
     - run `kubectl get pods --all-namespace` and check that newly created pods are finished being created
-13. Exposing Grafana
+**Note:** Step 13 is what the instructor recommended, this did not work for me, if it does not work for you skip to step 14
+13. Exposing Grafana - First Way
     - run `kubectl get pod -n monitoring | grep grafana` and look for pod named `prometheus-grafana-########` where `#` is random characters
     - copy the pods name
     - run `kubectl port-forward -n monitoring [pod name] 3000`
+**Note:** Step 14 worked for me instead of 13
+14. Exposing Grafana - Second Way
+    - run ``kubectl patch svc "prometheus-grafana" --namespace "monitoring" -p '{"spec": {"type": "LoadBalancer"}}'`
+    - run `kubectl --namespace monitoring port-forward svc/prometheus-grafana --address 0.0.0.0 3000:80`
+    - After `Handling connection for 3000` appears in console open a tab in a browser for localhost:3000
+15. Login to Grafana
+    - username: admin
+    - password: prom-operator
+16. Expose Frontend app
+    - Open a new bash window
+    - ssh back into vagrant
+    - run `kubectl patch svc "frontend-service" -p '{"spec": {"type": "LoadBalancer"}}'` to make sure is patched
+    - run `kubectl port-forward svc/frontend-service 8080:8080`
+    - once `Forwarding from [::1]:8080 -> 8080` appears in console open a new browser tab at `localhost:8080` website should load
 
+# TO LIST:
 **Note:** For the screenshots, you can store all of your answer images in the `answer-img` directory.
 
 ## Verify the monitoring installation
 
 *TODO:* run `kubectl` command to show the running pods and services for the three components. Copy and paste the output or take a screenshot of the output and include it here to verify the installation
+1. screen shots are in `answer-img` folder
+    - `Default_pods_and_services.PNG` for default namespace
+    - `Monitoring_pods_and_services.PNG` for Monitoring namespace
+    - `Observability_pods_and_services.PNG` for Observability namespace
 
 ## Setup the Jaeger and Prometheus source
 *TODO:* Expose Grafana to the internet and then setup Prometheus as a data source. Provide a screenshot of the home page after logging into Grafana.
+1. screen shot in  `answer-img` folder
+    - `grafana_mainpage.PNG` for screen shot of home page after logging in
 
 ## Create a Basic Dashboard
 *TODO:* Create a dashboard in Grafana that shows Prometheus as a source. Take a screenshot and include it here.
+1. screen shot in `answer-img` folder
+    - `new_dashboard_prometheus_source` for screen shot of new database with prometheus as a source
 
 ## Describe SLO/SLI
 *TODO:* Describe, in your own words, what the SLIs are, based on an SLO of *monthly uptime* and *request response time*.
