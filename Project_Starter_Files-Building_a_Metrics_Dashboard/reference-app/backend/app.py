@@ -58,25 +58,16 @@ def add_star():
 
 
 def register_blueprints(app):
-    """
-    Register blueprints to the app
-    """
     app.register_blueprint(MAIN)
 
 
 def create_app(config):
-  """
-	Application factory
-	"""
   register_blueprints(app)
   register_metrics(app, app_version=config["version"], app_config=config["config"])
   return app
 
 
 def create_dispatcher() -> DispatcherMiddleware:
-  """
-	App factory for dispatcher middleware managing multiple WSGI apps
-	"""
   main_app = create_app(config=CONFIG)
   return DispatcherMiddleware(main_app.wsgi_app, {"/metrics": make_wsgi_app()})
 
