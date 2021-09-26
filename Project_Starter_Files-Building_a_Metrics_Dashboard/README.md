@@ -4,9 +4,9 @@
 ## Verify the monitoring installation
 
 *TODO:* run `kubectl` command to show the running pods and services for the three components. Copy and paste the output or take a screenshot of the output and include it here to verify the installation
-    - ![alt text](https://github.com/gpcmax/[reponame]/blob/[branch]/Monitoring_pods_and_services.PNG?raw=true)
-    - ![alt text](https://github.com/gpcmax/[reponame]/blob/[branch]/Observability_pods_and_services.PNG?raw=true)
-    - ![alt text](https://github.com/gpcmax/[reponame]/blob/[branch]/Default_pods_and_services.PNG?raw=true)
+    - ![alt text](https://github.com/gpcmax/CNAND_nd064_C4_Observability_Starter_Files/Project_Starter_Files-Building_a_Metrics_Dashboard/answer-img/Monitoring_pods_and_services.PNG?raw=true)
+    - ![alt text](https://github.com/gpcmax/CNAND_nd064_C4_Observability_Starter_Files/blob/[branch]/Observability_pods_and_services.PNG?raw=true)
+    - ![alt text](https://github.com/gpcmax/CNAND_nd064_C4_Observability_Starter_Files/blob/[branch]/Default_pods_and_services.PNG?raw=true)
 
 ## Setup the Jaeger and Prometheus source
 *TODO:* Expose Grafana to the internet and then setup Prometheus as a data source. Provide a screenshot of the home page after logging into Grafana.
