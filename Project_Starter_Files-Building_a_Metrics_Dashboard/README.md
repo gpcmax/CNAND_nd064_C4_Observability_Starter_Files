@@ -1,46 +1,20 @@
 ## Project Set up
-
-1. Run `vagrant up` command - Wait till it is finished
-2. Run `vagrant ssh` command
-3. Run `sudo su -` command. Then navigate to vagrant folder - EX: `cd ..` then `cd /vagrant`
-4. Install helm - 
-    - `curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3`
-    - `chmod 700 get_helm.sh`
-    - `./get_helm.sh`
-5. Install Grafana and Prometheus
-    - run `kubectl create namespace monitoring`
-    - run `helm repo add stable https://charts.helm.sh/stable`
-    - run `helm repo update`
-    - run `helm install prometheus prometheus-community/kube-prometheus-stack --namespace monitoring --kubeconfig /etc/rancher/k3s/k3s.yaml`
-6. Open a new bash window and repeat steps `2-3`
-7. run `kubectl get pods --all-namespace` to check if pods are finished being created
-    - wait until pods are finished being created
-    - if a pod is crashing, run `sudo curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=v1.20.7+k3s1 sh -` and continue waiting for pods to be in running or completed states
-8. Install Jaegar
-    - run `kubectl create namespace observability`
-    - run `kubectl create -f https://raw.githubusercontent.com/jaegertracing/jaeger-operator/master/deploy/crds/jaegertracing.io_jaegers_crd.yaml`
-    - run `kubectl create -n observability -f https://raw.githubusercontent.com/jaegertracing/jaeger-operator/master/deploy/service_account.yaml`
-    - run `kubectl create -n observability -f https://raw.githubusercontent.com/jaegertracing/jaeger-operator/master/deploy/role.yaml`
-    - run `kubectl create -n observability -f https://raw.githubusercontent.com/jaegertracing/jaeger-operator/master/deploy/role_binding.yaml`
-    - run `kubectl create -n observability -f https://raw.githubusercontent.com/jaegertracing/jaeger-operator/master/deploy/operator.yaml`
-9. run `kubectl get pods --all-namespace` to check if pods are finished being created or in a pending state
-10. Cluster wide Jaeger
-    - run `kubectl create -f https://raw.githubusercontent.com/jaegertracing/jaeger-operator/master/deploy/cluster_role.yaml`
-    - run `kubectl create -f https://raw.githubusercontent.com/jaegertracing/jaeger-operator/master/deploy/cluster_role_binding.yaml`
-11. After running cluster wide keep checking on status of the pods using `kubectl get pods --all-namespace`
-    - this may take some time, just keep checking until they are finished
-
 **Note:** For the screenshots, you can store all of your answer images in the `answer-img` directory.
 
 ## Verify the monitoring installation
 
 *TODO:* run `kubectl` command to show the running pods and services for the three components. Copy and paste the output or take a screenshot of the output and include it here to verify the installation
+    - ![alt text](https://github.com/gpcmax/[reponame]/blob/[branch]/Monitoring_pods_and_services.PNG?raw=true)
+    - ![alt text](https://github.com/gpcmax/[reponame]/blob/[branch]/Observability_pods_and_services.PNG?raw=true)
+    - ![alt text](https://github.com/gpcmax/[reponame]/blob/[branch]/Default_pods_and_services.PNG?raw=true)
 
 ## Setup the Jaeger and Prometheus source
 *TODO:* Expose Grafana to the internet and then setup Prometheus as a data source. Provide a screenshot of the home page after logging into Grafana.
+    - ![alt text](https://github.com/gpcmax/[reponame]/blob/[branch]/grafana_mainpage.PNG?raw=true)
 
 ## Create a Basic Dashboard
 *TODO:* Create a dashboard in Grafana that shows Prometheus as a source. Take a screenshot and include it here.
+    - ![alt text](https://github.com/gpcmax/[reponame]/blob/[branch]/PrometheusDashboard.PNG?raw=true)
 
 ## Describe SLO/SLI
 *TODO:* Describe, in your own words, what the SLIs are, based on an SLO of *monthly uptime* and *request response time*.
@@ -50,9 +24,11 @@
 
 ## Create a Dashboard to measure our SLIs
 *TODO:* Create a dashboard to measure the uptime of the frontend and backend services We will also want to measure to measure 40x and 50x errors. Create a dashboard that show these values over a 24 hour period and take a screenshot.
+    - ![alt text](https://github.com/gpcmax/[reponame]/blob/[branch]/jaegerDashboard.png?raw=true)
 
 ## Tracing our Flask App
 *TODO:*  We will create a Jaeger span to measure the processes on the backend. Once you fill in the span, provide a screenshot of it here.
+    - ![alt text](https://github.com/gpcmax/[reponame]/blob/[branch]/MainDashboard.PNG?raw=true)
 
 ## Jaeger in Dashboards
 *TODO:* Now that the trace is running, let's add the metric to our current Grafana dashboard. Once this is completed, provide a screenshot of it here.
@@ -62,17 +38,17 @@
 
 TROUBLE TICKET
 
-Name:
+Name: Backend Error
 
-Date:
+Date: 09/26/2021
 
-Subject:
+Subject: Website 404 Error
 
-Affected Area:
+Affected Area: Backend Service
 
-Severity:
+Severity: Urgent
 
-Description:
+Description: 
 
 
 ## Creating SLIs and SLOs
