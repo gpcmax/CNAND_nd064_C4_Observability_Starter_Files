@@ -4,17 +4,17 @@
 ## Verify the monitoring installation
 
 *TODO:* run `kubectl` command to show the running pods and services for the three components. Copy and paste the output or take a screenshot of the output and include it here to verify the installation
-    - ![alt text](https://github.com/gpcmax/CNAND_nd064_C4_Observability_Starter_Files/blob/master/Project_Starter_Files-Building_a_Metrics_Dashboard/answer-img/MainDashboard.PNG?raw=true)
-    - ![alt text](https://github.com/gpcmax/CNAND_nd064_C4_Observability_Starter_Files/blob/[branch]/Observability_pods_and_services.PNG?raw=true)
-    - ![alt text](https://github.com/gpcmax/CNAND_nd064_C4_Observability_Starter_Files/blob/[branch]/Default_pods_and_services.PNG?raw=true)
+    - ![alt text](https://github.com/gpcmax/CNAND_nd064_C4_Observability_Starter_Files/blob/master/Project_Starter_Files-Building_a_Metrics_Dashboard/answer-img/Monitoring_pods_and_services.PNG?raw=true)
+    - ![alt text](https://github.com/gpcmax/CNAND_nd064_C4_Observability_Starter_Files/blob/master/Project_Starter_Files-Building_a_Metrics_Dashboard/answer-img/Observability_pods_and_services.PNG?raw=true)
+    - ![alt text](https://github.com/gpcmax/CNAND_nd064_C4_Observability_Starter_Files/blob/master/Project_Starter_Files-Building_a_Metrics_Dashboard/answer-img/Default_pods_and_services.PNG?raw=true)
 
 ## Setup the Jaeger and Prometheus source
 *TODO:* Expose Grafana to the internet and then setup Prometheus as a data source. Provide a screenshot of the home page after logging into Grafana.
-    - ![alt text](https://github.com/gpcmax/[reponame]/blob/[branch]/grafana_mainpage.PNG?raw=true)
+    - ![alt text](https://github.com/gpcmax/CNAND_nd064_C4_Observability_Starter_Files/blob/master/Project_Starter_Files-Building_a_Metrics_Dashboard/answer-img/grafana_mainpage.PNG?raw=true)
 
 ## Create a Basic Dashboard
 *TODO:* Create a dashboard in Grafana that shows Prometheus as a source. Take a screenshot and include it here.
-    - ![alt text](https://github.com/gpcmax/[reponame]/blob/[branch]/PrometheusDashboard.PNG?raw=true)
+    - ![alt text](https://github.com/gpcmax/CNAND_nd064_C4_Observability_Starter_Files/blob/master/Project_Starter_Files-Building_a_Metrics_Dashboard/answer-img/PrometheusDashboard.PNG?raw=true)
 
 ## Describe SLO/SLI
 *TODO:* Describe, in your own words, what the SLIs are, based on an SLO of *monthly uptime* and *request response time*.
@@ -24,11 +24,11 @@
 
 ## Create a Dashboard to measure our SLIs
 *TODO:* Create a dashboard to measure the uptime of the frontend and backend services We will also want to measure to measure 40x and 50x errors. Create a dashboard that show these values over a 24 hour period and take a screenshot.
-    - ![alt text](https://github.com/gpcmax/[reponame]/blob/[branch]/jaegerDashboard.png?raw=true)
+    - ![alt text](https://github.com/gpcmax/CNAND_nd064_C4_Observability_Starter_Files/blob/master/Project_Starter_Files-Building_a_Metrics_Dashboard/answer-img/jaegerDashboard.PNG?raw=true)
 
 ## Tracing our Flask App
 *TODO:*  We will create a Jaeger span to measure the processes on the backend. Once you fill in the span, provide a screenshot of it here.
-    - ![alt text](https://github.com/gpcmax/[reponame]/blob/[branch]/MainDashboard.PNG?raw=true)
+    - ![alt text](https://github.com/gpcmax/CNAND_nd064_C4_Observability_Starter_Files/blob/master/Project_Starter_Files-Building_a_Metrics_Dashboard/answer-img/MainDashboard.PNG?raw=true)
 
 ## Jaeger in Dashboards
 *TODO:* Now that the trace is running, let's add the metric to our current Grafana dashboard. Once this is completed, provide a screenshot of it here.
