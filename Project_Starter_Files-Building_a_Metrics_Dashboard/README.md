@@ -91,7 +91,7 @@ Description: Base on metrics the error rate is appearing at high of a rate.
         * Errors per second during a month for Backend service. 
 
     * Hardware Usage:
-        * Cpu usage per service during a month of use.
+        * Cpu usage per service.
         * Memory usage in mb used during a month for each service.
 
     * Uptime:
