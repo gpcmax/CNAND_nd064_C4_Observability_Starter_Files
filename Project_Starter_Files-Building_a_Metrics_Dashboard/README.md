@@ -90,9 +90,9 @@ Description: Base on metrics the error rate is appearing at high of a rate.
         * Errors per second during a month for Frontend service.
         * Errors per second during a month for Backend service. 
 
-    * Memory Usage:
-        * Total cpu usage per service during a month of use.
-        * Total memory usage in mb used during a month for each service.
+    * Hardware Usage:
+        * Cpu usage per service during a month of use.
+        * Memory usage in mb used during a month for each service.
 
     * Uptime:
         * Total network bandwith transmitted per service during a month.
