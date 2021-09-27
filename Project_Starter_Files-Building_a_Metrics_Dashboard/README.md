@@ -83,19 +83,19 @@ Description: Base on metrics the error rate is appearing at high of a rate.
 *TODO*: Now that we have our SLIs and SLOs, create KPIs to accurately measure these metrics. We will make a dashboard for this, but first write them down here.
 
     * Latency:
-        * Backend Total Latency per month.
-        * Frontend Total Latency per month.
+        * Backend Total Latency.
+        * Frontend Total Latency.
 
     * Error Rate:
-        * Errors per second during a month for Frontend service.
-        * Errors per second during a month for Backend service. 
+        * Errors per second for Frontend service.
+        * Errors per second for Backend service. 
 
     * Hardware Usage:
         * Cpu usage for the backend/frontend services.
         * Memory usage in mb for the backend and frontend services.
 
     * Uptime:
-        * Total network bandwith transmitted per service during a month.
+        * Current rate of Bytes transmitted and received
         * Uptime of Frontend Service and Backend Service.
         
 
