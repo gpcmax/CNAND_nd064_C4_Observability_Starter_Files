@@ -83,12 +83,12 @@ Description: Base on metrics the error rate is appearing at high of a rate.
 *TODO*: Now that we have our SLIs and SLOs, create KPIs to accurately measure these metrics. We will make a dashboard for this, but first write them down here.
 
     * Latency:
-        * Average time taken for a message to send per month.
-        * Total latency that a service expereinces per month.
+        * Backend Total Latency per month.
+        * Frontend Total Latency per month.
 
     * Error Rate:
-        * Total number of errors per month.
-        * Average time of errors per second during a month. 
+        * Errors per second during a month for Frontend service.
+        * Errors per second during a month for Backend service. 
 
     * Memory Usage:
         * Total cpu usage per service during a month of use.
@@ -96,7 +96,7 @@ Description: Base on metrics the error rate is appearing at high of a rate.
 
     * Uptime:
         * Total network bandwith transmitted per service during a month.
-        * Average time services stays up without an error per month
+        * Uptime of Frontend Service and Backend Service.
         
 
 ## Final Dashboard
