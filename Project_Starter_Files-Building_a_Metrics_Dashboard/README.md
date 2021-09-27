@@ -71,13 +71,13 @@ Description: Base on metrics the error rate is appearing at high of a rate.
 ## Creating SLIs and SLOs
 *TODO:* We want to create an SLO guaranteeing that our application has a 99.95% uptime per month. Name three SLIs that you would use to measure the success of this SLO.
 
-    * Latency: Weekly Goal: During a week requests will take less then 80 ms 96% of the time.
+    * Latency: Monthly Goal: During a Month requests will take less then 80 ms 96% of the time.
 
-    * Error Rate: Weekly Goal: During a week 97% of all HTTP status should return 20x.
+    * Error Rate: Monthly Goal: During a Month 97% of all HTTP status should return 20x.
 
-    * Memory Usage: Weekly Goal: During a week memory usage will be below 50 mb 98% of the time.
+    * Memory Usage: Monthly Goal: During a Month memory usage will be below 50 mb 98% of the time.
 
-    * Uptime: Weekly Goal: The average uptime during the month of August was 99.96%.
+    * Uptime: Monthly Goal: The average uptime during the month of August was 99.96%.
 
 ## Building KPIs for our plan
 *TODO*: Now that we have our SLIs and SLOs, create KPIs to accurately measure these metrics. We will make a dashboard for this, but first write them down here.
