@@ -71,7 +71,7 @@ Description: Base on metrics the error rate is appearing at high of a rate.
 ## Creating SLIs and SLOs
 *TODO:* We want to create an SLO guaranteeing that our application has a 99.95% uptime per month. Name three SLIs that you would use to measure the success of this SLO.
 
-    * Latency: Weekly Goal: During a week request will take less then 80 ms 96% of the time.
+    * Latency: Weekly Goal: During a week requests will take less then 80 ms 96% of the time.
 
     * Error Rate: Weekly Goal: During a week 97% of all HTTP status should return 20x.
 
@@ -82,11 +82,11 @@ Description: Base on metrics the error rate is appearing at high of a rate.
 
     * Total memory usage in mb used during a month for each service.
 
-    * Total latency in ms used during a month for each service.
+    * Total network bandwith transmitted per service during a month.
 
     * Total number of errors per month.
 
-    * Total cpu usage per service
+    * Total cpu usage per service during a month of use.
 
 ## Final Dashboard
 *TODO*: Create a Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. Include a screenshot of the dashboard here, and write a text description of what graphs are represented in the dashboard.  
