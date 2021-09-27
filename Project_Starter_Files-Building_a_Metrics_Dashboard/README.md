@@ -90,4 +90,4 @@ Description: Base on metrics the error rate is appearing at high of a rate.
 
 ## Final Dashboard
 *TODO*: Create a Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. Include a screenshot of the dashboard here, and write a text description of what graphs are represented in the dashboard.  
-    - ![alt text](https://github.com/gpcmax/CNAND_nd064_C4_Observability_Starter_Files/blob/master/Project_Starter_Files-Building_a_Metrics_Dashboard/answer-img/FullDashboard.PNG?raw=true)
+    ![alt text](https://github.com/gpcmax/CNAND_nd064_C4_Observability_Starter_Files/blob/master/Project_Starter_Files-Building_a_Metrics_Dashboard/answer-img/FullDashboard.PNG?raw=true)
