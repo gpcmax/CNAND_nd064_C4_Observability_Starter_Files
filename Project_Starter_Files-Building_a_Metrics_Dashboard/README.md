@@ -77,17 +77,28 @@ Description: Base on metrics the error rate is appearing at high of a rate.
 
     * Memory Usage: Weekly Goal: During a week memory usage will be below 50 mb 98% of the time.
 
+    * Uptime: Weekly Goal: The average uptime during the month of August was 99.96%.
+
 ## Building KPIs for our plan
 *TODO*: Now that we have our SLIs and SLOs, create KPIs to accurately measure these metrics. We will make a dashboard for this, but first write them down here.
 
-    * Total memory usage in mb used during a month for each service.
+    * Latency:
+        * Average time taken for a message to send per month.
+        * Total latency that a service expereinces per month.
 
-    * Total network bandwith transmitted per service during a month.
+    * Error Rate:
+        * Total number of errors per month.
+        * Average time of errors per second during a month. 
 
-    * Total number of errors per month.
+    * Memory Usage:
+        * Total cpu usage per service during a month of use.
+        * Total memory usage in mb used during a month for each service.
 
-    * Total cpu usage per service during a month of use.
+    * Uptime:
+        * Total network bandwith transmitted per service during a month.
+        * Average time services stays up without an error per month
+        
 
 ## Final Dashboard
 *TODO*: Create a Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. Include a screenshot of the dashboard here, and write a text description of what graphs are represented in the dashboard.  
-    ![alt text](https://github.com/gpcmax/CNAND_nd064_C4_Observability_Starter_Files/blob/master/Project_Starter_Files-Building_a_Metrics_Dashboard/answer-img/FullDashboard.PNG?raw=true)
+    ![alt text](https://github.com/gpcmax/CNAND_nd064_C4_Observability_Starter_Files/blob/master/Project_Starter_Files-Building_a_Metrics_Dashboard/answer-img/FullDashboardWithDetails.PNG?raw=true)
